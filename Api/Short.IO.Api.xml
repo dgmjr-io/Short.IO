@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Short.IO.Api</name>
+    </assembly>
+    <members>
+        <member name="P:Short.IO.Api.Models.LinkBase.AllowDuplicates">
+            <summary>
+            Allow duplicate links. If true, you can create multiple links with the same original URL. False by default
+            </summary>
+        </member>
+    </members>
+</doc>

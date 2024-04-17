@@ -1,0 +1,38 @@
+<Project>
+  <Import Project="Sdk.props" Sdk="DgmjrSdk" />
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <TargetFrameworks>net8.0</TargetFrameworks>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <EnableCentralPackageVersions>false</EnableCentralPackageVersions>
+    <NoWarn>$(NoWarn);CS1591;NU1504;IDE0065</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="$(MSBuildProjectDirectory)/**/*.dialog" />
+    <Content Include="$(MSBuildProjectDirectory)/**/*.lg" />
+    <Content Include="$(MSBuildProjectDirectory)/**/*.lu" />
+    <Content Include="$(MSBuildProjectDirectory)/**/*.schema" />
+    <Content Include="$(MSBuildProjectDirectory)/**/*.uischema" />
+    <Content Include="$(MSBuildProjectDirectory)/**/*.qna" />
+    <Content Include="$(MSBuildProjectDirectory)/README.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="$(MSBuildProjectDirectory)/icon.png" Pack="true" PackagePath="icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Dgmjr.BotFramework" />
+    <Using Include="Dgmjr.BotFramework.Core" />
+    <Using Include="Dgmjr.BotFramework.Attributes" />
+    <Using Include="Dgmjr.BotFramework.Abstractions" />
+    <Using Include="Dgmjr.BotFramework.Settings" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageTag Include="msbot-action" />
+  </ItemGroup>
+</Project>

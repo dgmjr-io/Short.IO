@@ -1,0 +1,100 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build Short.IO Bot",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "build",
+        "${workspaceFolder}/Short.IO.Bot/Short.IO.Bot.csproj",
+        "/property:GenerateFullPaths=true",
+        "/consoleloggerparameters:NoSummary;ForceNoAlign"
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "Run Short.IO Bot",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "run",
+        "--project",
+        "${workspaceFolder}/Short.IO.Bot/Short.IO.Bot.csproj",
+        "/property:GenerateFullPaths=true",
+        "/consoleloggerparameters:NoSummary;ForceNoAlign",
+        "-c:Local"
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "Publish Short.IO Bot",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "publish",
+        "${workspaceFolder}/Short.IO.Bot/Short.IO.Bot.csproj",
+        "/property:GenerateFullPaths=true",
+        "/consoleloggerparameters:NoSummary;ForceNoAlign",
+        "-c:Release",
+        "-o:${workspaceFolder}/bot"
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "Watch Short.IO Bot",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "watch",
+        "run",
+        "--project",
+        "${workspaceFolder}/Short.IO.Bot/Short.IO.Bot.csproj",
+        "-c:Local"
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    // {
+    //   "label": "ngrok Short.IO Bot",
+    //   "command": "ngrok",
+    //   "type": "process",
+    //   "args": [
+    //     "http",
+    //     "--domain=linkshorteningbot.dgmjr.app",
+    //     "3978"
+    //   ],
+    //   "problemMatcher": "$msCompile"
+    // },
+    {
+      "label": "devtunnel mocshortlinkmaker",
+      "command": "devtunnel",
+      "type": "process",
+      "args": [
+        "host",
+        "mocshortlinkmaker.use",
+        "--allow-anonymous"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "devtunnel set mocshortlinkmaker as default",
+      "command": "devtunnel",
+      "type": "process",
+      "args": [
+        "set",
+        "mocshortlinkmaker.use"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "devtunnel set mocshortlinkmaker as default",
+      "command": "devtunnel",
+      "type": "process",
+      "args": [
+        "set",
+        "mocshortlinkmaker.use"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}
