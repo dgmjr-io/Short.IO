@@ -14,7 +14,8 @@
 ]
 
 # SendActivity_DidNotUnderstand_text()
-- Sorry, I didn't get that.
+- Huh?  Bro, speak ENGLISH to me!
+- Bro, you have to type the shit I ask for when I ask you for it! Now pay the fuck attention!
 # SendActivity_UVdmy3()
 [Activity
     Text = ${SendActivity_UVdmy3_text()}
