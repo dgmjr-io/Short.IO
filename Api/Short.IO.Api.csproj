@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dgmjr.BotFramework.Core" Version="[0.0.1-Local,)" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
+    <PackageReference Include="Newtonsoft.Json.Extensions" Version="[0.0.1-Local,)" />
+    <PackageReference Include="System.Net.Http" Version="[4.3.4,)" />
+    <PackageReference Include="System.Text.Json.Usings" Version="[0.0.1-Local,)" />
+    <PackageReference Include="Microsoft.Bot.Builder.Dialogs.Adaptive.Runtime" Version="[4.22.2,)" />
+    <PackageReference Include="Microsoft.Bot.Builder.Dialogs.Adaptive" Version="[4.22.2,)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Microsoft.Extensions.DependencyInjection" />
+    <Using Include="Microsoft.Extensions.Logging" />
+    <Using Include="Microsoft.Extensions.Options" />
+    <Using Include="Short.IO.Api.Models" />
+    <Using Include="Short.IO.Api" />
+    <Using Include="Short.IO.Api.Services" />
+    <Using Include="Short.IO" />
+    <Using Include="System.Net.Http" />
+  </ItemGroup>
+
+</Project>

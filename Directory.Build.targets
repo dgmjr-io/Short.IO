@@ -1,0 +1,20 @@
+<Project>
+  <Import Project="Sdk.targets" Sdk="DgmjrSdk" />
+
+  <PropertyGroup>
+    <DelaySign>true</DelaySign>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="@(ProjectReference->'%(RelativeDir)bin/$(Configuration)/$(TargetFramework)/%(Filename).dll')" />
+  </ItemGroup>
+
+  <!-- <Import Project="Sdk.targets" Sdk="NuGetPush" /> -->
+  <!-- <Import Project="../targets/PushDgmjrNuGetSoftware.targets" Sdk="NuGetPush" /> -->
+  <Target Name="NuGetPushAll" AfterTargets="Build">
+    <CallTarget Targets="PushDgmjrNuGetSoftware" />
+  </Target>
+  <Target Name="GetPackageMetadata" DependsOnTargets="$(GetPackageMetadataDependsOn)">
+  </Target>
+
+</Project>
